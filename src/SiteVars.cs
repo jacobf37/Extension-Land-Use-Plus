@@ -24,7 +24,8 @@ namespace Landis.Extension.LandUse
 
             //allowEstablishment = new AllowEstablishmentSiteVar();
             //Model.Core.RegisterSiteVar(allowEstablishment, "LandUse.AllowEstablishment");
-
+            //JSF - What does this do
+            Landis.Library.DensityHarvest.SiteVars.CohortsPartiallyDamaged = modelCore.Landscape.NewSiteVar<int>();
             Landis.Library.BiomassHarvest.SiteVars.CohortsPartiallyDamaged = modelCore.Landscape.NewSiteVar<int>();
         }
 

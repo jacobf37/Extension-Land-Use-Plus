@@ -29,8 +29,7 @@
 
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <!--<OutputPath>C:\BRM\LANDIS_II\GitCode\brmiranda\Core-Model-v7\Tool-Console\src\bin\extensions</OutputPath>-->
-    <OutputPath>bin\Debug\</OutputPath>
+	  <OutputPath>C:\Users\jacobfraser\source\repos\Core-Model-v7\Tool-Console\src\bin\extensions</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -44,26 +43,29 @@
 
   <ItemGroup>
     <Reference Include="Landis.Library.AgeOnlyCohorts-v3">
-      <HintPath>..\..\..\Support-Library-Dlls-v7\Landis.Library.AgeOnlyCohorts-v3.dll</HintPath>
+      <HintPath>..\..\Support-Library-Dlls-v7\Landis.Library.AgeOnlyCohorts-v3.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.Biomass-v2">
-      <HintPath>..\..\..\Support-Library-Dlls-v7\Landis.Library.Biomass-v2.dll</HintPath>
+      <HintPath>..\..\Support-Library-Dlls-v7\Landis.Library.Biomass-v2.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.BiomassCohorts-v3">
-      <HintPath>..\..\..\Support-Library-Dlls-v7\Landis.Library.BiomassCohorts-v3.dll</HintPath>
+      <HintPath>..\..\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.BiomassCohorts-v3.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.BiomassHarvest-v3">
-      <HintPath>..\..\..\Support-Library-Dlls-v7\Landis.Library.BiomassHarvest-v3.dll</HintPath>
+      <HintPath>..\..\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.BiomassHarvest-v3.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.Cohorts-v2">
-      <HintPath>..\..\..\Support-Library-Dlls-v7\Landis.Library.Cohorts-v2.dll</HintPath>
+      <HintPath>..\..\Support-Library-Dlls-v7\Landis.Library.Cohorts-v2.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.SiteHarvest-v2">
-      <HintPath>..\..\..\Support-Library-Dlls-v7\Landis.Library.SiteHarvest-v2.dll</HintPath>
+      <HintPath>..\..\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.SiteHarvest-v2.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.Succession-v8">
-      <HintPath>..\..\..\Support-Library-Dlls-v7\Landis.Library.Succession-v8.dll</HintPath>
+      <HintPath>..\..\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.Succession-v8.dll</HintPath>
     </Reference>
+	  <Reference Include="Landis.Library.DensityHarvest-v1">
+		  <HintPath>..\..\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.DensityHarvest-v1.dll</HintPath>
+	  </Reference>
   </ItemGroup>
 
 </Project>

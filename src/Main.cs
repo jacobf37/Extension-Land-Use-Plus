@@ -40,6 +40,7 @@ namespace Landis.Extension.LandUse
         {
             Model.Core = modelCore;
             Landis.Library.BiomassHarvest.Main.InitializeLib(Model.Core);
+            Landis.Library.DensityHarvest.Main.InitializeLib(Model.Core);
             Model.Core.UI.WriteLine("  Loading parameters from {0}", dataFile);
             ParameterParser parser = new ParameterParser(Model.Core.Species);
             parameters = Landis.Data.Load<Parameters>(dataFile, parser);
