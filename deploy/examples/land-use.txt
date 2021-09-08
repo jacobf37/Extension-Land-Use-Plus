@@ -45,10 +45,10 @@ LandUse          "RemoveDensity"
 >>	PreventEstablishment  
 	LandCoverChange  RemoveDensity
 >>	RepeatHarvest?   yes
-		acerrubr	1-200	(20%)
-		pinustro	50-300	(30%)
-		querrubr	50-200	(40%)
->>	Plant fraxamer
+		acerrubr	1-200	(2)
+		pinustro	50-300	(1)
+		querrubr	50-200	(3)
+	Plant fraxamer (20)
 >>	PreventEstablishment  <<prevent establishment implemented before LandCoverChange
 >>	LandCoverChange	 InsectDefoliation <<removes the set percentage of foliage biomass
 >>	RepeatHarvest?    yes

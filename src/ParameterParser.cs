@@ -10,6 +10,8 @@ using Landis.Library.DensityHarvest;
 using Landis.Library.SiteHarvest;
 using Landis.Library.Succession;
 using System.Collections.Generic;
+using System.Text;
+using System;
 
 namespace Landis.Extension.LandUse
 {
@@ -209,7 +211,7 @@ namespace Landis.Extension.LandUse
                                                         "LandCoverChange");
                 ICohortCutter cohortCutter = Library.DensityHarvest.CohortCutterFactory.CreateCutter(selector,
                                                                               Main.ExtType);
-                Planting.SpeciesList speciesToPlant = ReadSpeciesToPlant();
+                Planting.SpeciesList speciesToPlant = ReadDensitySpeciesToPlant();
                 landCoverChange = new LandCover.RemoveDensity(cohortCutter, speciesToPlant, repeatHarvest);
                 DensityThinning.CohortSelectors.Clear();    //Prevent interactions with Biomass Harvest
                 LandCover.LandCover.DontParseTrees = false;
@@ -265,5 +267,12 @@ namespace Landis.Extension.LandUse
                 base.CreateCohortSelectionMethodFor(species, ages, ranges);
             }
         }
+
+        //----------------------------------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------
+
+
+
     }
 }
