@@ -82,6 +82,7 @@ namespace Landis.Extension.LandUse
             if (SiteLog.Enabled)
                 SiteLog.TimestepSetUp();
 
+
             if (pauseFunction != null)
             {
                 pauseFunction.PauseTimestep();

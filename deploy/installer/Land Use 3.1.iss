@@ -6,7 +6,8 @@
 #define AppURL "http://www.landis-ii.org/"
 
 ; Build directory
-#define BuildDir "..\..\src\bin\Release\netstandard2.0"
+#define BuildDir "..\"
+#define DependDir "..\..\..\Library-Succession\Deploy\release"
 
 ; LANDIS-II installation directories
 #define ExtDir "C:\Program Files\LANDIS-II-v7\extensions"
@@ -56,7 +57,12 @@ Source: {#BuildDir}\Landis.Library.BiomassHarvest-v3.dll; DestDir: {#ExtDir}; Fl
 Source: {#BuildDir}\Landis.Library.Biomass-v2.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall replacesameversion
 Source: {#BuildDir}\Landis.Library.Cohorts-v2.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall replacesameversion
 Source: {#BuildDir}\Landis.Library.SiteHarvest-v2.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall replacesameversion
-Source: {#BuildDir}\Landis.Library.Succession-v7.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall replacesameversion
+Source: {#BuildDir}\Landis.Library.Succession-v9.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall replacesameversion
+Source: {#BuildDir}\Landis.Library.DensityHarvest-v1.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall replacesameversion
+Source: {#DependDir}\Accord.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall replacesameversion
+Source: {#DependDir}\Accord.Statistics.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall replacesameversion
+Source: {#DependDir}\Accord.Math.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall replacesameversion
+Source: {#DependDir}\MathNet.Numerics.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall replacesameversion
 
 ; Complete example for testing the extension
 ; Source: ..\examples\*.txt; DestDir: {#AppDir}\examples\{#ExtensionName}; Flags: replacesameversion
