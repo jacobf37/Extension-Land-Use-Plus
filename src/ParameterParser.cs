@@ -6,6 +6,7 @@
 using Landis.Utilities;
 using Landis.Core;
 using Landis.Library.BiomassHarvest;
+using Landis.Library.DensityHarvest;
 using Landis.Library.SiteHarvest;
 using Landis.Library.Succession;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace Landis.Extension.LandUse
     /// a text file.
     /// </summary>
     public class ParameterParser
-        : BasicParameterParser<Parameters>
+        :  Library.SiteHarvest.BasicParameterParser<Parameters>//, Library.Succession.BasicParameterParser<Parameters>
     {
         // Singleton for all the land uses that have no land cover changes
         private static LandCover.IChange noLandCoverChange = new LandCover.NoChange();
@@ -189,11 +190,27 @@ namespace Landis.Extension.LandUse
                                                         ParameterNames.Plant,
                                                         "Tony Bonanza",
                                                         "LandCoverChange");
-                ICohortCutter cohortCutter = CohortCutterFactory.CreateCutter(selector,
+                ICohortCutter cohortCutter = Library.BiomassHarvest.CohortCutterFactory.CreateCutter(selector,
                                                                               Main.ExtType);
-                Planting.SpeciesList speciesToPlant = ReadSpeciesToPlant();
+                Planting.SpeciesList speciesToPlant = ReadDensitySpeciesToPlant();
                 landCoverChange = new LandCover.RemoveTrees(cohortCutter, speciesToPlant, repeatHarvest);
                 PartialThinning.CohortSelectors.Clear();    //Prevent interactions with Biomass Harvest
+                LandCover.LandCover.DontParseTrees = false;
+            }
+            else if (landCoverChangeType.Value.Actual == LandCover.RemoveDensity.TypeName)
+            {
+                LandCover.LandCover.DontParseTrees = true;
+                DensityThinning.CohortSelectors.Clear();    //Clear static storage selector to prevent writing across land uses
+                InputValues.Register<AgeRange>(DensityThinning.ReadAgeOrRange);
+                ICohortSelector selector = selector = ReadSpeciesAndCohorts("LandUse",
+                                                        ParameterNames.Plant,
+                                                        "Tony Bonanza",
+                                                        "LandCoverChange");
+                ICohortCutter cohortCutter = Library.DensityHarvest.CohortCutterFactory.CreateCutter(selector,
+                                                                              Main.ExtType);
+                Planting.SpeciesList speciesToPlant = ReadDensitySpeciesToPlant();
+                landCoverChange = new LandCover.RemoveDensity(cohortCutter, speciesToPlant, repeatHarvest);
+                DensityThinning.CohortSelectors.Clear();    //Prevent interactions with Biomass Harvest
                 LandCover.LandCover.DontParseTrees = false;
             }
             else if (landCoverChangeType.Value.Actual == LandCover.InsectDefoliation.TypeName)
