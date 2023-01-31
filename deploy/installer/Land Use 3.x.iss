@@ -1,13 +1,13 @@
 ; LANDIS-II Extension infomation
 #define CoreRelease "LANDIS-II-V7"
 #define ExtensionName "Land Use Change"
-#define AppVersion "3.2"
+#define AppVersion "3.3"
 #define AppPublisher "LANDIS-II Foundation"
 #define AppURL "http://www.landis-ii.org/"
 
 ; Build directory
-#define BuildDir ".."
-;#define BuildDir "..\..\src\bin\Debug"
+;#define BuildDir ".."
+#define BuildDir "..\..\src\bin\Debug"
 
 ; LANDIS-II installation directories
 #define ExtDir "C:\Program Files\LANDIS-II-v7\extensions"
@@ -56,8 +56,10 @@ Source: {#BuildDir}\Landis.Library.BiomassCohorts-v3.dll; DestDir: {#ExtDir}; Fl
 Source: {#BuildDir}\Landis.Library.BiomassHarvest-v3.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall ignoreversion
 Source: {#BuildDir}\Landis.Library.Biomass-v2.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall ignoreversion
 Source: {#BuildDir}\Landis.Library.Cohorts-v2.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall ignoreversion
+Source: {#BuildDir}\Landis.Library.DensityCohorts-v1.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall ignoreversion
+Source: {#BuildDir}\Landis.Library.DensityHarvest-v1.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall ignoreversion
 Source: {#BuildDir}\Landis.Library.SiteHarvest-v2.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall ignoreversion
-Source: {#BuildDir}\Landis.Library.Succession-v8.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall ignoreversion
+Source: {#BuildDir}\Landis.Library.Succession-v9.dll; DestDir: {#ExtDir}; Flags: uninsneveruninstall ignoreversion
 
 ; Complete example for testing the extension
 Source: ..\examples\*.txt; DestDir: {#AppDir}\examples\{#ExtensionName}; Flags: ignoreversion skipifsourcedoesntexist
