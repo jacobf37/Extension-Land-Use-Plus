@@ -6,7 +6,7 @@
 using Landis.Utilities;
 using Landis.Core;
 using Landis.Library.BiomassHarvest;
-using Landis.Library.DensityHarvest;
+//using Landis.Library.DensityHarvest;
 using Landis.Library.SiteHarvest;
 using Landis.Library.Succession;
 using System.Collections.Generic;
@@ -106,7 +106,7 @@ namespace Landis.Extension.LandUse
             Dictionary<string, int> nameLineNumbers = new Dictionary<string, int>();
             Dictionary<ushort, int> mapCodeLineNumbers = new Dictionary<ushort, int>();
             PartialThinning.InitializeClass();
-            DensityThinning.InitializeClass();
+            //DensityThinning.InitializeClass();
             while (!AtEndOfInput)
             {
                 int nameLineNum = LineNumber;
@@ -200,7 +200,7 @@ namespace Landis.Extension.LandUse
                 PartialThinning.CohortSelectors.Clear();    //Prevent interactions with Biomass Harvest
                 LandCover.LandCover.DontParseTrees = false;
             }
-            else if (landCoverChangeType.Value.Actual == LandCover.RemoveDensity.TypeName)
+            /*else if (landCoverChangeType.Value.Actual == LandCover.RemoveDensity.TypeName)
             {
                 LandCover.LandCover.DontParseTrees = true;
                 DensityThinning.CohortSelectors.Clear();    //Clear static storage selector to prevent writing across land uses
@@ -215,7 +215,7 @@ namespace Landis.Extension.LandUse
                 landCoverChange = new LandCover.RemoveDensity(cohortCutter, speciesToPlant, repeatHarvest);
                 DensityThinning.CohortSelectors.Clear();    //Prevent interactions with Biomass Harvest
                 LandCover.LandCover.DontParseTrees = false;
-            }
+            }*/
             else if (landCoverChangeType.Value.Actual == LandCover.InsectDefoliation.TypeName)
             {
                 //Insects will reduce biomass of cohorts rather than directly affecting demographics       
@@ -253,14 +253,10 @@ namespace Landis.Extension.LandUse
         {
             if (LandCover.LandCover.DontParseTrees)
             {
-                if (!DensityThinning.CreateCohortSelectorFor(species, ages, ranges))
+                 if (!PartialThinning.CreateCohortSelectorFor(species, ages, ranges))
                 {
                     base.CreateCohortSelectionMethodFor(species, ages, ranges);
                 }
-                //else if (!PartialThinning.CreateCohortSelectorFor(species, ages, ranges))
-                //{
-                //    base.CreateCohortSelectionMethodFor(species, ages, ranges);
-                //}
             }
             else if (!LandCover.LandCover.CreateCohortSelectorFor(species, ages, ranges))
             {

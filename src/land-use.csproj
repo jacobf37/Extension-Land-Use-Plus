@@ -59,9 +59,6 @@
     <Reference Include="Landis.Library.Cohorts-v2">
       <HintPath>..\..\..\Support-Library-Dlls-v7\Landis.Library.Cohorts-v2.dll</HintPath>
     </Reference>
-    <Reference Include="Landis.Library.DensityHarvest-v1">
-      <HintPath>..\..\..\brmiranda\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.DensityHarvest-v1.dll</HintPath>
-    </Reference>
     <Reference Include="Landis.Library.SiteHarvest-v2">
       <HintPath>..\..\..\brmiranda\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.SiteHarvest-v2.dll</HintPath>
     </Reference>
