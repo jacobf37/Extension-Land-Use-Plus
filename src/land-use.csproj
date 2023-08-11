@@ -2,10 +2,10 @@
 
   <PropertyGroup>
     <RootNamespace>Landis.Extension.LandUse</RootNamespace>
-    <AssemblyName>Landis.Extension.LandUse-v3</AssemblyName>
-    <AssemblyTitle>Landis.Extension.LandUse-v3</AssemblyTitle>
+    <AssemblyName>Landis.Extension.LandUse-v3.3</AssemblyName>
+    <AssemblyTitle>Landis.Extension.LandUse-v3.3</AssemblyTitle>
     <AssemblyCompany>Landis-II-Foundation</AssemblyCompany>
-    <AssemblyProduct>Landis.Extension.LandUse-v3</AssemblyProduct>
+    <AssemblyProduct>Landis.Extension.LandUse-v3.3</AssemblyProduct>
     <AssemblyCopyright>Landis-II-Foundation</AssemblyCopyright>
     <AssemblyVersion>3.3</AssemblyVersion>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -34,7 +34,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\deploy</OutputPath>
+    <OutputPath>..\deploy\libs\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -46,14 +46,14 @@
     <Reference Include="Landis.Library.AgeOnlyCohorts-v3">
       <HintPath>..\..\..\Support-Library-Dlls-v7\Landis.Library.AgeOnlyCohorts-v3.dll</HintPath>
     </Reference>
-    <Reference Include="Landis.Library.Biomass-v2">
-      <HintPath>..\..\..\brmiranda\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.Biomass-v2.dll</HintPath>
+    <Reference Include="Landis.Library.Biomass-v2.1">
+      <HintPath>..\..\..\brmiranda\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.Biomass-v2.1.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.BiomassCohorts-v4">
       <HintPath>..\..\..\brmiranda\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.BiomassCohorts-v4.dll</HintPath>
     </Reference>
-    <Reference Include="Landis.Library.BiomassHarvest-v3">
-      <HintPath>..\..\..\brmiranda\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.BiomassHarvest-v3.dll</HintPath>
+    <Reference Include="Landis.Library.BiomassHarvest-v3.3">
+      <HintPath>..\..\..\brmiranda\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.BiomassHarvest-v3.3.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.Cohorts-v2">
       <HintPath>..\..\..\Support-Library-Dlls-v7\Landis.Library.Cohorts-v2.dll</HintPath>
@@ -64,8 +64,8 @@
     <Reference Include="Landis.Library.DensityHarvest-v1">
       <HintPath>..\..\..\brmiranda\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.DensityHarvest-v1.dll</HintPath>
     </Reference>
-    <Reference Include="Landis.Library.SiteHarvest-v2">
-      <HintPath>..\..\..\brmiranda\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.SiteHarvest-v2.dll</HintPath>
+    <Reference Include="Landis.Library.SiteHarvest-v2.1">
+      <HintPath>..\..\..\brmiranda\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.SiteHarvest-v2.1.dll</HintPath>
     </Reference>
     <Reference Include="Landis.Library.Succession-v9">
       <HintPath>..\..\..\brmiranda\Core-Model-v7\Tool-Console\src\bin\extensions\Landis.Library.Succession-v9.dll</HintPath>

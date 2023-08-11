@@ -1,0 +1,9 @@
+LandisData   Extension
+
+Name         "Land Use Change v3.3"
+Version      "3.3 (beta 3)"
+Type         "disturbance:land use"
+Assembly     Landis.Extension.LandUse-v3.3
+Class        Landis.Extension.LandUse.Main
+Description  "Land Use and Land Cover Change"
+CoreVersion  7.0

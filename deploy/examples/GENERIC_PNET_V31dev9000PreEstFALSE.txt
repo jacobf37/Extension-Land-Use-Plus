@@ -28,10 +28,11 @@ PreventEstablishment	false
 >>PressureHeadCalculationMethod	SaxtonAndRawls
 MaxCanopyLayers			2
 IMAX 5
-MaxDevLyrAv  9000
+>>MaxDevLyrAv  9000
 wythers true
 PrecipEvents	11
 >>maxfolo3red 0
 >>o3_halfsat 1
 >>PrecIntConst 0.1 >> defines how much precipitation is intercepted with each increment of LAI.  Default value=0.1 according to B. Miranda.  
 Dtemp true  >> True=eric's "new" way of doing it like pnet-II.  False="Arjan's" old way of doing it using ftemp. 
+LayerThreshRatio		0.5

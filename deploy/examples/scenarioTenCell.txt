@@ -11,7 +11,7 @@ CellLength 100 << meters
 
 >> Disturbance Extensions   Initialization File
 >> ----------------------   -------------------
- "Land Use Change"	"land-use.txt"     
+ "Land Use Change v3.3"		"land-use.txt"     
 
 >> Other Extensions         Initialization File
 >> ----------------         -------------------
